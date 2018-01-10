@@ -44,6 +44,7 @@ abstract class CwpSearchIndex extends SolrIndex
     {
         // Add optional boost
         if (SiteTree::has_extension(CwpSearchBoostExtension::class)) {
+            $this->addFulltextField('SearchBoost');
             $this->setFieldBoosting(SiteTree::class . '_SearchBoost', SiteTree::config()->get('search_boost'));
         }
     }
