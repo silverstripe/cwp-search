@@ -1,0 +1,11 @@
+---
+Name: cwpsearchextensions
+---
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - CWP\Search\Extensions\SynonymsSiteConfig
+
+#SilverStripe\CMS\Model\SiteTree:
+#  search_boost: 1.5
+#  extensions:
+#    - CWP\Search\Extensions\CwpSearchBoostExtension
