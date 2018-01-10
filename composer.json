@@ -1,0 +1,31 @@
+{
+    "name": "cwp/cwp-search",
+    "description": "CWP fulltextsearch integration module",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "cwp"
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "cwp/cwp-core": "^2",
+        "silverstripe/fulltextsearch": "^3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^3"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "CWP\\Search\\": "src/",
+            "CWP\\Search\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
