@@ -1,9 +1,9 @@
 ---
 Name: cwpsearchextensions
 ---
-SilverStripe\SiteConfig\SiteConfig:
+CWP\CWP\PageTypes\BasePageController:
   extensions:
-    - CWP\Search\Extensions\SynonymsSiteConfig
+    - CWP\Search\Extensions\SearchControllerExtension
 
 #SilverStripe\CMS\Model\SiteTree:
 #  search_boost: 1.5
