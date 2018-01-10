@@ -1,9 +1,9 @@
 en:
   CWP\Search\CwpSearchPage:
-    PLURALNAME: 'Base Pages'
+    PLURALNAME: 'Search pages'
     PLURALS:
       one: 'A Cwp Search Page'
-      other: '{count} Base Pages'
+      other: '{count} Search pages'
     SINGULARNAME: 'Cwp Search Page'
   CWP\Search\Extensions\CwpSearchBoostExtension:
     PAGEINFO: 'Page info and SEO'
