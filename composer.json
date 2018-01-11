@@ -8,7 +8,7 @@
     ],
     "license": "BSD-3-Clause",
     "require": {
-        "cwp/cwp-core": "^2",
+        "cwp/cwp": "^2",
         "silverstripe/fulltextsearch": "^3"
     },
     "require-dev": {
