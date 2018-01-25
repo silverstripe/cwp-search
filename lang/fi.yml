@@ -6,5 +6,3 @@ fi:
     SearchBoostNote: '(Vaikuttaa vain sivuston sisäiseen hakuun, ei esim. Googlen hakutuloksiin)'
   CWP\Search\Extensions\SynonymsSiteConfig:
     SearchSynonyms: 'Haun synonyymit'
-  CWP\Search\CwpSearchPage:
-    DESCRIPTION: 'Yleinen sisältösivu'

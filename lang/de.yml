@@ -1,3 +1,5 @@
 de:
   CWP\Search\CwpSearchPage:
-    DESCRIPTION: 'Allgemeine Inhaltsseite'
+    PLURALNAME: 'Suchseiten'
+  CWP\Search\Extensions\SynonymsSiteConfig:
+    SearchSynonyms: 'Synonyme durchsuchen'

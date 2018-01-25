@@ -6,5 +6,3 @@ ru:
   CWP\Search\Extensions\SynonymsSiteConfig:
     SearchSynonyms: 'Поиск синонимов'
     SearchSynonyms_Description: 'Вводите синонимы через запятую, каждая группа синонимов с новой строки.<br /> Для применения изменений запустите <a rel="external" target="_blank" href="dev/tasks/Solr_Configure">Solr_Configure</a>'
-  CWP\Search\CwpSearchPage:
-    DESCRIPTION: 'Обычная страница'
