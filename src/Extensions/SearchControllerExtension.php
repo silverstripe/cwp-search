@@ -51,10 +51,10 @@ class SearchControllerExtension extends Extension
      * @var array
      */
     private static $classes_to_search = [
-        [
-            'class' => 'Page',
+        Page::class => [
+            'class' => Page::class,
             'includeSubclasses' => true,
-        ]
+        ],
     ];
 
     /**
