@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/silverstripe/cwp-search.svg?branch=master)](https://travis-ci.org/silverstripe/cwp-search)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/silverstripe/cwp-search/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/silverstripe/cwp-search/?branch=master)
 [![codecov](https://codecov.io/gh/silverstripe/cwp-search/branch/master/graph/badge.svg)](https://codecov.io/gh/silverstripe/cwp-search)
+[![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
 
 This module provides a fulltextsearch configuration, index and search engine for CWP 2.0.
 
