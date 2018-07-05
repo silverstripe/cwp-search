@@ -57,12 +57,12 @@ class CwpSearchEngine
     {
         $query = new SearchQuery();
         $query->classes = $classes;
-        $query->search($keywords);
-        $query->exclude(SiteTree::class . '_ShowInSearch', 0);
+        $query->addSearchTerm($keywords);
+        $query->addExclude(SiteTree::class . '_ShowInSearch', 0);
 
         // Artificially lower the amount of results to prevent too high resource usage.
         // on subsequent canView check loop.
-        $query->limit(100);
+        $query->setLimit(100);
 
         // Allow user code to modify the search query before returning it
         $this->extend('updateSearchQuery', $query);
