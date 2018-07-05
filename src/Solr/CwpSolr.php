@@ -26,7 +26,7 @@ class CwpSolr
      * $options - An array consisting of:
      *
      * 'extraspath' - (String) Where to find Solr core configuartion files.
-     *     Defaults to '<BASE_PATH>/mysite/conf/extras'.
+     *     Defaults to '<BASE_PATH>/app/conf/extras'.
      * 'version' - select the Solr configuration to use when in CWP. One of:
      * * 'cwp-4': preferred version, uses secured 4.x service available on CWP
      * * 'local-4': this can be use for development using silverstripe-localsolr package, 4.x branch
@@ -62,8 +62,8 @@ class CwpSolr
         // CAUTION: CWP does not permit usage of customised solrconfig.xml.
         if (isset($options['extraspath']) && file_exists($options['extraspath'])) {
             $solrOptions['extraspath'] = $options['extraspath'];
-        } elseif (file_exists(BASE_PATH . '/mysite/conf/extras')) {
-            $solrOptions['extraspath'] = BASE_PATH . '/mysite/conf/extras';
+        } elseif (file_exists(BASE_PATH . '/app/conf/extras')) {
+            $solrOptions['extraspath'] = BASE_PATH . '/app/conf/extras';
         }
 
         Solr::configure_server($solrOptions);
