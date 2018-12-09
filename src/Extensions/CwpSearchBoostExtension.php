@@ -35,7 +35,9 @@ class CwpSearchBoostExtension extends DataExtension
 
         // Rename metafield
         $meta = $fields->fieldByName('Root.Main.Metadata');
-        $meta->setTitle(_t(__CLASS__ . '.PAGEINFO', 'Page info and SEO'));
+        if ($meta) {
+            $meta->setTitle(_t(__CLASS__ . '.PAGEINFO', 'Page info and SEO'));
+        }
 
         $boostTitle = _t(__CLASS__ . '.SearchBoost', 'Boost Keywords');
         $boostNote = _t(
