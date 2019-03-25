@@ -6,9 +6,7 @@ use SilverStripe\FullTextSearch\Solr\Solr;
 use SilverStripe\FullTextSearch\Solr\Stores\SolrConfigStore;
 
 /**
- * Class CwpSolrConfigStore
- *
- * Uploads configuration to Solr via the PHP proxy CWP uses to filter requests
+ * @deprecated 1.2.0 Use SolrConfigStore_Post in silverstripe/fulltextsearch instead
  */
 class CwpSolrConfigStore implements SolrConfigStore
 {
@@ -35,7 +33,7 @@ class CwpSolrConfigStore implements SolrConfigStore
             $options['host'] . ':' . $options['port'],
             $config['path']
         ]);
-        
+
         if (isset($config['remotepath'])) {
             $this->remote = $config['remotepath'];
         }

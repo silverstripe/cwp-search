@@ -83,7 +83,7 @@ class CwpSolr
             'path' => '/v4/',
             'version' => 4,
             'indexstore' => [
-                'mode' => CwpSolrConfigStore::class,
+                'mode' => 'post',
                 'path' => '/v4',
             ],
         ];
