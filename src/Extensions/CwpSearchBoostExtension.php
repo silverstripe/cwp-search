@@ -4,6 +4,7 @@ namespace CWP\Search\Extensions;
 
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\ToggleCompositeField;
 use SilverStripe\ORM\DataExtension;
 
 /**
@@ -31,14 +32,7 @@ class CwpSearchBoostExtension extends DataExtension
      */
     public function updateCMSFields(FieldList $fields)
     {
-        parent::updateCMSFields($fields);
-
-        // Rename metafield
-        $meta = $fields->fieldByName('Root.Main.Metadata');
-        if ($meta) {
-            $meta->setTitle(_t(__CLASS__ . '.PAGEINFO', 'Page info and SEO'));
-        }
-
+        $pageInfoTitle = _t(__CLASS__ . '.PAGEINFO', 'Page info and SEO');
         $boostTitle = _t(__CLASS__ . '.SearchBoost', 'Boost Keywords');
         $boostNote = _t(
             __CLASS__ . '.SearchBoostNote',
@@ -52,6 +46,23 @@ class CwpSearchBoostExtension extends DataExtension
         $boostField = TextareaField::create('SearchBoost', $boostTitle)
             ->setRightTitle($boostNote)
             ->setDescription($boostDescription);
-        $fields->insertBefore('MetaDescription', $boostField);
+
+        if ($meta = $fields->fieldByName('Root.Main.Metadata')) {
+            // Rename metafield if it exists
+            $meta->setTitle($pageInfoTitle);
+            $fields->insertBefore('MetaDescription', $boostField);
+        } else {
+            // Else create new field to store SEO
+            $fields->addFieldToTab(
+                'Root.Main',
+                ToggleCompositeField::create(
+                    'Metadata',
+                    $pageInfoTitle,
+                    [
+                        $boostField,
+                    ]
+                )
+            );
+        }
     }
 }
