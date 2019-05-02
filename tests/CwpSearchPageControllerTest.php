@@ -6,6 +6,8 @@ use SilverStripe\Dev\FunctionalTest;
 
 class CwpSearchPageControllerTest extends FunctionalTest
 {
+    protected $usesDatabase = true;
+
     public function testIndex()
     {
         $this->autoFollowRedirection = false;
