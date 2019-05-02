@@ -32,4 +32,9 @@ class CwpSearchPageController extends PageController
         }
         parent::__construct($dataRecord);
     }
+
+    public function index()
+    {
+        return $this->redirect($this->Link('SearchForm'));
+    }
 }
