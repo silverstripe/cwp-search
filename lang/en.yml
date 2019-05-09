@@ -10,6 +10,10 @@ en:
     SearchBoost: 'Boost Keywords'
     SearchBoostDescription: 'Enter keywords separated by comma ( , ) for which to boost the ranking of this page within the search results on this site.'
     SearchBoostNote: '(Only applies to the search results on this site e.g. not on Google search)'
+  CWP\Search\Extensions\SearchControllerExtension:
+    EmptySearch: 'Search field empty, please enter your search query.'
+    MetaTitle: 'Search {keywords}'
+    NoResult: 'Sorry, your search query did not return any results.'
   CWP\Search\Extensions\SynonymValidator:
     InvalidValue: 'Synonyms cannot contain words separated by spaces'
   CWP\Search\Extensions\SynonymsSiteConfig:
