@@ -1,7 +1,7 @@
 sv:
   CWP\Search\CwpSearchPage:
     PLURALNAME: 'Sök igenom sidor'
-    SINGULARNAME: 'Cwp-söksida'
+    SINGULARNAME: Cwp-söksida
   CWP\Search\Extensions\CwpSearchBoostExtension:
     PAGEINFO: 'Sid inof och SEO'
     SearchBoost: 'Lyft sökord'
