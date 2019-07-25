@@ -27,6 +27,11 @@ abstract class CwpSearchIndex extends SolrIndex
         '_text',
         '_spellcheckText',
     ];
+    
+    private static $casting = [
+        'getFieldDefinitions' => 'HTMLText',
+        'FieldDefinitions' => 'HTMLText'
+    ];
 
     /**
      * Default dictionary to use. This will overwrite the 'spellcheck.dictionary' option for searches given,
