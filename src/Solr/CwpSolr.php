@@ -111,7 +111,14 @@ class CwpSolr
                     : BASE_PATH . '/.solr',
                 'remotepath' => Environment::getEnv('SOLR_REMOTE_PATH')
                     ? Environment::getEnv('SOLR_REMOTE_PATH')
-                    : null
+                    : null,
+                'port' => Environment::getEnv('SOLR_INDEXSTORE_PORT')
+                    ? Environment::getEnv('SOLR_INDEXSTORE_PORT')
+                    : (
+                        Environment::getEnv('SOLR_PORT')
+                            ? Environment::getEnv('SOLR_PORT')
+                            : 8983
+                    )
             ]
         ];
     }
