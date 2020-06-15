@@ -7,7 +7,7 @@ services:
 
 env:
   global:
-    - COMPOSER_ROOT_VERSION=1.x-dev
+    - COMPOSER_ROOT_VERSION=1.3.x-dev
 
 matrix:
   include:
@@ -20,7 +20,7 @@ matrix:
     - php: 7.2
       env: DB=MYSQL PHPUNIT_TEST=1 PHPCS_TEST=1 RECIPE_VERSION="^4"
     - php: 7.3
-      env: DB=MYSQL PHPUNIT_COVERAGE_TEST=1 RECIPE_VERSION="4.x-dev"
+      env: DB=MYSQL PHPUNIT_COVERAGE_TEST=1 RECIPE_VERSION="4.6.x-dev"
 
 before_script:
   # Init PHP
