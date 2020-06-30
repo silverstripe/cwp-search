@@ -1,8 +1,13 @@
 language: php
 
+dist: xenial
+
+services:
+  - mysql
+
 env:
   global:
-    - COMPOSER_ROOT_VERSION=1.x-dev
+    - COMPOSER_ROOT_VERSION=1.2.x-dev
 
 matrix:
   include:
@@ -23,7 +28,7 @@ before_script:
 
   # Install composer dependencies
   - composer validate
-  - composer require --no-update silverstripe/recipe-cms:1.x-dev
+  - composer require --no-update silverstripe/recipe-cms:4.4.x-dev
   - composer install --prefer-dist --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
 
 script:
