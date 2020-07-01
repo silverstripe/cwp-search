@@ -2,6 +2,7 @@
 
 namespace CWP\Search;
 
+use SilverStripe\FullTextSearch\Search\Services\SearchableService;
 use SilverStripe\ORM\PaginatedList;
 use SilverStripe\View\ArrayData;
 use SilverStripe\View\ViewableData;
@@ -61,15 +62,15 @@ class CwpSearchResult extends ViewableData
     public function __construct($terms = '', ArrayData $results = null)
     {
         $this->query = $terms;
+        $searchableService = SearchableService::singleton();
         if ($results) {
             // Clean up the results.
             $matches = $results->Matches;
             foreach ($matches as $result) {
-                if (!$result->canView()) {
+                if (!$searchableService->isViewable($result)) {
                     $matches->remove($result);
                 }
             }
-
             $this->matches = $matches;
             $this->suggestion = $results->SuggestionNice;
         }
