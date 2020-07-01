@@ -9,7 +9,7 @@
     "license": "BSD-3-Clause",
     "require": {
         "cwp/cwp": "^2",
-        "silverstripe/fulltextsearch": "^3.7@dev"
+        "silverstripe/fulltextsearch": "^3@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
