@@ -30,6 +30,12 @@ class CwpSearchEngine
     private static $search_options = [
         'hl' => 'true',
     ];
+    
+    /**
+     * @var boolean
+     * @config
+     */
+    private static $use_spellcheck = true;
 
     /**
      * Additional search options to send to search when spellcheck
@@ -132,7 +138,8 @@ class CwpSearchEngine
 
         try {
             // Begin search
-            $result = $this->getResult($keywords, $classes, $searchIndex, $limit, $start, true);
+            $spellcheck = $this->config()->get('use_spellcheck');
+            $result = $this->getResult($keywords, $classes, $searchIndex, $limit, $start, $spellcheck);
 
             // Return results if we don't need to refine this any further
             if (!$followSuggestions || $result->hasResults() || !$result->getSuggestion()) {
