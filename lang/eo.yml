@@ -10,6 +10,10 @@ eo:
     SearchBoost: 'Plialtigotaj  ŝlosilvortoj'
     SearchBoostDescription: 'Enigu la ŝlosilvortojn disigitaj per komo ( , ) por kiu plialtigi la rangon de ĉi tiu paĝo en la serĉaj rezultoj en ĉi tiu retejo.'
     SearchBoostNote: '(Aplikiĝas nur al la serĉaj rezultoj en ĉi tiu retejo, ekzemple ne en Google-serĉo)'
+  CWP\Search\Extensions\SearchControllerExtension:
+    EmptySearch: 'Serĉa kampo vakas, bonvolu enigi vian serĉpeton.'
+    MetaTitle: 'Serĉi {keywords}'
+    NoResult: 'Bedaŭrinde via serĉpeto ne liveris rezultojn.'
   CWP\Search\Extensions\SynonymValidator:
     InvalidValue: 'Sinonimoj ne povas enhavi vortojn disigitajn per spacetoj'
   CWP\Search\Extensions\SynonymsSiteConfig:
