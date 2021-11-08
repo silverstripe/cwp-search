@@ -14,6 +14,6 @@ class CwpSearchPageControllerTest extends FunctionalTest
         $result = $this->get('/search');
 
         $this->assertSame(302, $result->getStatusCode());
-        $this->assertContains('SearchForm', $result->getHeader('Location'));
+        $this->assertStringContainsString('SearchForm', $result->getHeader('Location'));
     }
 }

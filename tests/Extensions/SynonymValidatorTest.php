@@ -12,7 +12,7 @@ class SynonymValidatorTest extends SapphireTest
      */
     protected $validator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
