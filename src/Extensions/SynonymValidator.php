@@ -71,12 +71,12 @@ class SynonymValidator extends Validator
     {
         // strip empty lines
         $lines = array_filter(
-            explode("\n", $value)
+            explode("\n", $value ?? '')
         );
 
         // strip comments (lines beginning with "#")
-        $lines = array_filter($lines, function ($line) {
-            $line = trim($line);
+        $lines = array_filter($lines ?? [], function ($line) {
+            $line = trim($line ?? '');
 
             return !empty($line) && $line[0] !== '#';
         });
@@ -100,10 +100,10 @@ class SynonymValidator extends Validator
      */
     protected function validateLine($line)
     {
-        $line = trim($line);
+        $line = trim($line ?? '');
 
-        $parts = explode(',', $line);
-        $parts = array_filter($parts);
+        $parts = explode(',', $line ?? '');
+        $parts = array_filter($parts ?? []);
 
         foreach ($parts as $part) {
             if (!$this->validatePart($part)) {
@@ -123,9 +123,9 @@ class SynonymValidator extends Validator
      */
     protected function validatePart($part)
     {
-        if (strpos($part, '=>') !== false) {
-            $subs = explode('=>', $part);
-            $subs = array_filter($subs);
+        if (strpos($part ?? '', '=>') !== false) {
+            $subs = explode('=>', $part ?? '');
+            $subs = array_filter($subs ?? []);
 
             foreach ($subs as $sub) {
                 if (!$this->validateNoSpaces($sub)) {
@@ -147,10 +147,10 @@ class SynonymValidator extends Validator
     protected function validateNoSpaces($value)
     {
         // allow spaces at the beginning and end of the value
-        $value = trim($value);
+        $value = trim($value ?? '');
 
         // does the value contain 1 or more whitespace characters?
-        if (preg_match('/\s+/', $value)) {
+        if (preg_match('/\s+/', $value ?? '')) {
             return false;
         }
 

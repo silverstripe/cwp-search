@@ -46,7 +46,7 @@ class CwpSolrConfigStore implements SolrConfigStore
      */
     public function uploadFile($index, $file)
     {
-        $this->uploadString($index, basename($file), file_get_contents($file));
+        $this->uploadString($index, basename($file ?? ''), file_get_contents($file ?? ''));
     }
 
     /**

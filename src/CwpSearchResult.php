@@ -200,9 +200,9 @@ class CwpSearchResult extends ViewableData
         if (!$terms) {
             return null;
         }
-        $link = 'search/SearchForm?Search='.rawurlencode($terms);
+        $link = 'search/SearchForm?Search='.rawurlencode($terms ?? '');
         if ($format) {
-            $link .= '&format='.rawurlencode($format);
+            $link .= '&format='.rawurlencode($format ?? '');
         }
         return $link;
     }
@@ -210,6 +210,6 @@ class CwpSearchResult extends ViewableData
     public function hasField($field)
     {
         // Fix customise not detecting custom field getters
-        return array_key_exists($field, $this->config()->casting);
+        return array_key_exists($field, $this->config()->casting ?? []);
     }
 }
