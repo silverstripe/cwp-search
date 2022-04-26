@@ -60,7 +60,7 @@ class CwpSolr
 
         // Allow users to override extras path.
         // CAUTION: CWP does not permit usage of customised solrconfig.xml.
-        if (isset($options['extraspath']) && file_exists($options['extraspath'])) {
+        if (isset($options['extraspath']) && file_exists($options['extraspath'] ?? '')) {
             $solrOptions['extraspath'] = $options['extraspath'];
         } elseif (file_exists(BASE_PATH . '/app/conf/extras')) {
             $solrOptions['extraspath'] = BASE_PATH . '/app/conf/extras';
