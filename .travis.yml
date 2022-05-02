@@ -2,3 +2,9 @@ version: ~> 1.0
 
 import:
   - silverstripe/silverstripe-travis-shared:config/provision/standard-jobs-range.yml
+
+env:
+  global:
+    # Require .x-dev versions of modules instead of ^ as defined in composer for php 8.1 compatibility
+    # This can be removed once a stable php 8.1 compatible versions have been released
+    - REQUIRE_EXTRA="silverstripe/fulltextsearch:3.x-dev silverstripe/hybridsessions:2.x-dev"
