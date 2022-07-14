@@ -11,7 +11,7 @@
         "php": "^7.3 || ^8.0",
         "silverstripe/framework": "^4.10",
         "cwp/cwp": "^2",
-        "silverstripe/fulltextsearch": "^3@dev"
+        "silverstripe/fulltextsearch": "^3"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
