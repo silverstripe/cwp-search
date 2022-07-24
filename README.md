@@ -1,6 +1,6 @@
 # CWP search integration
 
-[![Build Status](https://api.travis-ci.com/silverstripe/cwp-search.svg?branch=1)](https://travis-ci.com/silverstripe/cwp-search)
+[![CI](https://github.com/silverstripe/cwp-search/actions/workflows/ci.yml/badge.svg)](https://github.com/silverstripe/cwp-search/actions/workflows/ci.yml)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/silverstripe/cwp-search/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/silverstripe/cwp-search/?branch=master)
 [![codecov](https://codecov.io/gh/silverstripe/cwp-search/branch/master/graph/badge.svg)](https://codecov.io/gh/silverstripe/cwp-search)
 [![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
