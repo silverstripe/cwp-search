@@ -200,7 +200,7 @@ class CwpSearchResult extends ViewableData
         if (!$terms) {
             return null;
         }
-        $link = 'search/SearchForm?Search='.rawurlencode($terms ?? '');
+        $link = '/search/SearchForm?Search='.rawurlencode($terms ?? '');
         if ($format) {
             $link .= '&format='.rawurlencode($format ?? '');
         }
