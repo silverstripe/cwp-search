@@ -202,7 +202,7 @@ class CwpSearchResult extends ViewableData
             return null;
         }
         $link = Director::absoluteBaseURL();
-        $link .= '/search/SearchForm?Search='.rawurlencode($terms ?? '');
+        $link .= 'search/SearchForm?Search='.rawurlencode($terms ?? '');
         if ($format) {
             $link .= '&format='.rawurlencode($format ?? '');
         }
