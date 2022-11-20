@@ -2,6 +2,7 @@
 
 namespace CWP\Search\Solr;
 
+use SilverStripe\Dev\Deprecation;
 use SilverStripe\FullTextSearch\Solr\Solr;
 use SilverStripe\FullTextSearch\Solr\Stores\SolrConfigStore;
 
@@ -25,6 +26,11 @@ class CwpSolrConfigStore implements SolrConfigStore
      */
     public function __construct($config)
     {
+        Deprecation::notice(
+            '1.2.0',
+            'Use SolrConfigStore_Post in silverstripe/fulltextsearch instead',
+            Deprecation::SCOPE_CLASS
+        );
         $options = Solr::solr_options();
 
         $this->url = implode('', [
