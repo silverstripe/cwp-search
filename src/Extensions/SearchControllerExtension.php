@@ -5,6 +5,7 @@ namespace CWP\Search\Extensions;
 use CWP\Search\CwpSearchEngine;
 use Page;
 use SilverStripe\CMS\Search\SearchForm;
+use SilverStripe\Control\Director;
 use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Core\Extension;
@@ -72,7 +73,7 @@ class SearchControllerExtension extends Extension
         );
 
         $form = SearchForm::create($this->owner, SearchForm::class, $fields, $actions);
-        $form->setFormAction('search/SearchForm');
+        $form->setFormAction(Director::absoluteBaseURL().'search/SearchForm');
 
         return $form;
     }

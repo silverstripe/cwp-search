@@ -2,6 +2,7 @@
 
 namespace CWP\Search;
 
+use SilverStripe\Control\Director;
 use SilverStripe\FullTextSearch\Search\Services\SearchableService;
 use SilverStripe\ORM\PaginatedList;
 use SilverStripe\View\ArrayData;
@@ -200,7 +201,8 @@ class CwpSearchResult extends ViewableData
         if (!$terms) {
             return null;
         }
-        $link = 'search/SearchForm?Search='.rawurlencode($terms ?? '');
+        $link = Director::absoluteBaseURL();
+        $link .= 'search/SearchForm?Search='.rawurlencode($terms ?? '');
         if ($format) {
             $link .= '&format='.rawurlencode($format ?? '');
         }
