@@ -73,7 +73,7 @@ class SearchControllerExtension extends Extension
         );
 
         $form = SearchForm::create($this->owner, SearchForm::class, $fields, $actions);
-        $form->setFormAction(Director::absoluteBaseURL().'search/SearchForm');
+        $form->setFormAction(Director::absoluteURL('search/SearchForm'));
 
         return $form;
     }
