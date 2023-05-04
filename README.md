@@ -5,16 +5,9 @@
 
 This module provides a fulltextsearch configuration, index and search engine for CWP 2.0.
 
-## Requirements
-
-* CWP ^2
-* Fulltextsearch ^3
-
 ## Installation
 
-Install using Composer:
-
-```
+```sh
 composer require cwp/cwp-search
 ```
 
